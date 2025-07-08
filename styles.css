@@ -69,6 +69,11 @@ html {
   border-radius: 2px;
 }
 
+.container-logo-tagline {
+  position: relative;
+  z-index: 1;
+}
+
 /* navigation css */
 .navbar-nav {
   display: flex;
@@ -79,7 +84,6 @@ html {
 }
 
 #navbarSupportedContent {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -96,7 +100,7 @@ li {
   padding: 8px 16px;
   border-radius: 6px;
   width: auto;
-  height: 100px;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -106,7 +110,6 @@ li {
 }
 
 .test-5 {
-  margin-top: -30px;
   position: relative;
   z-index: 1;
 }
@@ -900,7 +903,7 @@ form button {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .test-6 {
     gap: 80px;
     padding: 0 20px;
@@ -976,5 +979,63 @@ form button {
   .button-style {
     font-size: 14px;
     padding: 6px 12px;
+  }
+}
+
+@media (min-width: 600px) {
+  .first {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .logo-tagline {
+    max-width: 400px;
+  }
+
+  .tagline h6 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container1 {
+    grid-template-columns: repeat(2, 1fr); /* 2 in a row on smaller screens */
+    gap: 15px;
+  }
+
+  .icon-wrapper {
+    font-size: 28px; /* Smaller icons */
+  }
+
+  .truck-image img {
+    width: auto;
+    margin-top: 60px;
+    margin-left: 80px;
+  }
+
+  .truck-heading h2 {
+    font-size: 20px;
+  }
+
+  .truck-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container1 {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-wrapper {
+    font-size: 24px;
+  }
+
+  .truck-image img {
+    width: 150px;
   }
 }
